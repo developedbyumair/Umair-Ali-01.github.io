@@ -26,7 +26,7 @@ export default function Home() {
           Image testing
         </Typography>
         {/* @ts-ignore */}
-        <Image src="/favicon.ico" width={760} height={760} />
+        <Image src="/certificate.png" width={760} height={760} />
         <Link href="/about" color="secondary">
           Go to the about page
         </Link>
