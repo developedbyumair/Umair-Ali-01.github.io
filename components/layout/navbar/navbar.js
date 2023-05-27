@@ -1,10 +1,10 @@
-import classes from './navbar.module.scss';
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { AnimatePresence, motion, useCycle } from 'framer-motion';
-import Modal from '../../layout/modal/modal';
-import ThemeToggle from './themeToggle';
-import MenuToggle from './menuToggle';
+import classes from "./navbar.module.scss";
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { AnimatePresence, motion, useCycle } from "framer-motion";
+import Modal from "../../layout/modal/modal";
+import ThemeToggle from "./themeToggle";
+import MenuToggle from "./menuToggle";
 
 const Navbar = (props) => {
   const { theme } = props;
@@ -15,7 +15,7 @@ const Navbar = (props) => {
   const [isOpen, toggleOpen] = useCycle(false, true);
 
   function setThemeHandler() {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
+    const newTheme = theme === "light" ? "dark" : "light";
     props.newTheme(newTheme);
   }
 
@@ -36,8 +36,8 @@ const Navbar = (props) => {
   }
 
   useEffect(() => {
-    if (showModal) document.body.style.overflow = 'hidden';
-    if (!showModal) document.body.style.overflow = 'unset';
+    if (showModal) document.body.style.overflow = "hidden";
+    if (!showModal) document.body.style.overflow = "unset";
   }, [showModal]);
 
   useEffect(() => {
@@ -49,10 +49,11 @@ const Navbar = (props) => {
       <div
         className={
           sticky ? `${classes.navbar}  ${classes.sticky}` : `${classes.navbar} `
-        }>
+        }
+      >
         <div className={classes.container}>
-          <Link href='/'>
-            <a className={classes.logo}></a>
+          <Link href="/">
+            <span className={classes.logo}></span>
           </Link>
 
           <nav
@@ -61,39 +62,49 @@ const Navbar = (props) => {
                 ? `${classes.navMenu} ${classes.responsive}`
                 : `${classes.navMenu}`
             }
-            id='navMenu'>
+            id="navMenu"
+          >
             <div className={classes.linkWrapper}>
-              <Link href='/projects'>
-                <motion.a
-                  style={{ cursor: 'pointer' }}
-                  initial={{ opacity: 0, y: -30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5 }}
-                  onClick={toggleNav}>
-                  Projects
-                </motion.a>
+              <Link href="/projects">
+                <>
+                  <motion.a
+                    style={{ cursor: "pointer" }}
+                    initial={{ opacity: 0, y: -30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    onClick={toggleNav}
+                  >
+                    Projects
+                  </motion.a>
+                </>
               </Link>
 
-              <Link href='/posts'>
-                <motion.a
-                  style={{ cursor: 'pointer' }}
-                  initial={{ opacity: 0, y: -30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
-                  onClick={toggleNav}>
-                  Blog
-                </motion.a>
+              <Link href="/posts">
+                <>
+                  <motion.a
+                    style={{ cursor: "pointer" }}
+                    initial={{ opacity: 0, y: -30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    onClick={toggleNav}
+                  >
+                    Blog
+                  </motion.a>
+                </>
               </Link>
 
-              <Link href='/#about'>
-                <motion.a
-                  style={{ cursor: 'pointer' }}
-                  initial={{ opacity: 0, y: -30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.7 }}
-                  onClick={toggleNav}>
-                  About me
-                </motion.a>
+              <Link href="/#about">
+                <>
+                  <motion.a
+                    style={{ cursor: "pointer" }}
+                    initial={{ opacity: 0, y: -30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.7 }}
+                    onClick={toggleNav}
+                  >
+                    About me
+                  </motion.a>
+                </>
               </Link>
             </div>
           </nav>
@@ -106,11 +117,12 @@ const Navbar = (props) => {
               className={classes.icon}
               onClick={() => {
                 toggleModal();
-              }}>
+              }}
+            >
               {showModal ? (
-                <i className='fa fa-envelope-open'></i>
+                <i className="fa fa-envelope-open"></i>
               ) : (
-                <i className='fa fa-envelope'></i>
+                <i className="fa fa-envelope"></i>
               )}
             </motion.button>
 
@@ -121,14 +133,16 @@ const Navbar = (props) => {
               className={classes.icon}
               onClick={() => {
                 setThemeHandler();
-              }}>
+              }}
+            >
               <ThemeToggle theme={theme} />
             </motion.button>
 
             <motion.div
               className={classes.iconMain}
               initial={false}
-              animate={isOpen ? 'open' : 'closed'}>
+              animate={isOpen ? "open" : "closed"}
+            >
               <MenuToggle toggleNav={toggleNav} />
             </motion.div>
           </div>

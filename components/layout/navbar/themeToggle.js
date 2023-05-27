@@ -1,13 +1,13 @@
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from "framer-motion";
 
 const ThemeToggle = (props) => {
   const { theme } = props;
 
   return (
-    <AnimatePresence exitBeforeEnter initial={false}>
+    <AnimatePresence mode="wait" initial={false}>
       <motion.i
-        className={`fa ${theme === 'light' ? 'fa-moon' : 'fa-sun'}`}
-        key={theme === 'light' ? 'moon' : 'sun'}
+        className={`fa ${theme === "light" ? "fa-moon" : "fa-sun"}`}
+        key={theme === "light" ? "moon" : "sun"}
         initial={{ x: -25, y: 5, opacity: 1 }}
         animate={{
           x: 0,
@@ -15,7 +15,7 @@ const ThemeToggle = (props) => {
           opacity: 1,
         }}
         exit={{ x: 25, y: 5, opacity: 0 }}
-        transition={{ ease: 'easeOut', duration: 0.4 }}
+        transition={{ ease: "easeOut", duration: 0.4 }}
       />
     </AnimatePresence>
   );
