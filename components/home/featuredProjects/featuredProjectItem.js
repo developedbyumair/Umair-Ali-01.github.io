@@ -1,6 +1,6 @@
-import classes from "./featuredProjectItem.module.scss";
-import Image from "next/image";
-import Link from "next/link";
+import classes from './featuredProjectItem.module.scss';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const FeaturedProjectItem = (props) => {
   const { project } = props;
@@ -13,7 +13,7 @@ const FeaturedProjectItem = (props) => {
             <h3>{project.title}</h3>
             <small>
               {Array.isArray(project.tech)
-                ? project.tech.join(", ")
+                ? project.tech.join(', ')
                 : project.tech}
             </small>
           </div>
@@ -22,14 +22,16 @@ const FeaturedProjectItem = (props) => {
         <div className={classes.row}>
           <div className={classes.columnRight}>
             <Link href={`/projects/${project.slug}`}>
-              <div className={classes.card}>
-                <Image
-                  src={`/portfolio/images/projects/${project.image}`}
-                  width={600}
-                  height={460}
-                  alt={project.title}
-                />
-              </div>
+              <a>
+                <div className={classes.card}>
+                  <Image
+                    src={`/portfolio/images/projects/${project.image}`}
+                    width={600}
+                    height={460}
+                    alt={project.title}
+                  />
+                </div>
+              </a>
             </Link>
           </div>
 
@@ -38,20 +40,22 @@ const FeaturedProjectItem = (props) => {
 
             <div className={classes.projectLinks}>
               {project.githubLink && (
-                <a href={project.githubLink} target="_blank" rel="noreferrer">
-                  <i className="fab fa-github"></i>
+                <a href={project.githubLink} target='_blank' rel='noreferrer'>
+                  <i className='fab fa-github'></i>
                   Github
                 </a>
               )}
               {project.liveLink && (
-                <a href={project.liveLink} target="_blank" rel="noreferrer">
-                  <i className="fas fa-link"></i>
+                <a href={project.liveLink} target='_blank' rel='noreferrer'>
+                  <i className='fas fa-link'></i>
                   Website
                 </a>
               )}
               <Link href={`/projects/${project.slug}`}>
-                <i className="fa fa-circle-info"></i>
-                Project details
+                <a>
+                  <i className='fa fa-circle-info'></i>
+                  Project details
+                </a>
               </Link>
             </div>
           </div>
