@@ -1,12 +1,4 @@
 /** @type {import('next').NextConfig} */
-const isProd = process.env.NODE_ENV === 'production';
-const nextConfig = {
+module.exports = {
   reactStrictMode: true,
-  images: {
-    loader: 'akamai',
-    path: isProd ? 'https://renebitter.github.io/' : '',
-  },
-  basePath: '/portfolio',
 };
-
-module.exports = nextConfig;
