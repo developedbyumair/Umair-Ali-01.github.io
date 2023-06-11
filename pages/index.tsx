@@ -6,33 +6,23 @@ import Link from "../src/Link";
 import ProTip from "../src/ProTip";
 import Copyright from "../src/Copyright";
 import Image from "next/image";
+import Head from "next/head";
+import { Header } from "../components/Header";
 
 export default function Home() {
+  React.useEffect(() => {
+    console.log("useEffect");
+    // @ts-ignore
+    document.querySelector("body").classList.add("dark");
+  }, []);
   return (
-    <Container maxWidth="lg">
-      <Box
-        sx={{
-          my: 4,
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Typography variant="h4" component="h1" gutterBottom>
-          MUI v5 + Next.js with TypeScript example
-        </Typography>
-        <Typography variant="h4" gutterBottom>
-          Image testing
-        </Typography>
-        {/* @ts-ignore */}
-        <Image src="/certificate.png" width={760} height={760} />
-        <Link href="/about" color="secondary">
-          Go to the about page
-        </Link>
-        <ProTip />
-        <Copyright />
-      </Box>
-    </Container>
+    <>
+      <div className="devman_tm_all_wrap" data-magic-cursor="show">
+        <Head>
+          <title>Umair | Home</title>
+        </Head>
+        <Header />
+      </div>
+    </>
   );
 }
