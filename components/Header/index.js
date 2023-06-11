@@ -13,10 +13,10 @@ export const Header = () => {
         <div className="header_inner">
           <div className="logo">
             <a className="light" href="#">
-              <img src="logo.png" alt="" />
+              <img src="img/logo/logo.png" alt="" />
             </a>
             <a className="dark" href="#">
-              <img src="logo.png" alt="" />
+              <img src="img/logo/dark.png" alt="" />
             </a>
           </div>
           <div className="menu">

@@ -1,0 +1,169 @@
+@charset "utf-8";
+body.dark{
+	background-color: #252439;
+	color: #aaaaba;
+}
+body.dark ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #a29fac;
+}
+body.dark :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: #a29fac;
+   opacity:  1;
+}
+body.dark ::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: #a29fac;
+   opacity:  1;
+}
+body.dark :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #a29fac;
+}
+body.dark ::-ms-input-placeholder { /* Microsoft Edge */
+   color: #a29fac;
+}
+body.dark ::placeholder { /* Most modern browsers support this now. */
+   color: #a29fac;
+}
+body.dark::-webkit-scrollbar {
+  width: 11px;
+}
+body.dark{
+  scrollbar-width: thin;
+  scrollbar-color: #777 #2b2d33;
+}
+body.dark:-webkit-scrollbar-track {
+  background: #2b2d33;
+}
+body.dark::-webkit-scrollbar-thumb {
+  background-color: #777;
+  border-radius: 6px;
+  border: 3px solid #2b2d33;
+}
+body.dark h1,body.dark h2,body.dark h3,body.dark h4,body.dark h5,body.dark h6{
+	color: #fff;
+}
+
+body.dark .devman_tm_modalbox .description_wrap{
+  scrollbar-width: thin;
+  scrollbar-color: #777 #34353a;
+}
+body.dark .devman_tm_modalbox .description_wrap:-webkit-scrollbar-track{
+  background: #34353a;
+}
+body.dark .devman_tm_modalbox .description_wrap::-webkit-scrollbar-thumb{
+  background-color: #777;
+  border-radius: 6px;
+  border: 3px solid #34353a;
+}
+body.dark .devman_tm_modalbox .box_inner{
+	background-color: #34353a;
+}
+body.dark .devman_tm_modalbox .description_wrap:after{
+	background-color: #34353a;
+}
+body.dark .devman_tm_modalbox .description_wrap:before{
+	background-color: #34353a;
+}
+body.dark .devman_tm_features .features_list ul li .short:before{
+	background-color: rgba(202,205,211,.24);
+}
+body.dark .progress_inner span.label{
+	color: #fff;
+}
+body.dark .devman_tm_accordion .acc_head p{
+	color: #fff;
+}
+body.dark .devman_tm_accordion .plus:after{
+	background-color: #fff;
+}
+body.dark .devman_tm_accordion .plus:before{
+	background-color: #fff;
+}
+body.dark .devman_tm_testimonials .swiper .swiper-slide .list_inner{
+	background-color: #444359;
+	box-shadow: none;
+}
+body.dark .devman_tm_testimonials .swiper .swiper-slide .text{
+	color: #aaaaba;
+}
+body.dark .devman_tm_testimonials .owl-theme .owl-dots .swiper-pagination-bullet.swiper-pagination-bullet-active {
+	background-color: #fff;
+}
+body.dark .devman_tm_testimonials .owl-theme .owl-dots .swiper-pagination-bullet {
+	background-color: #7c7c88;
+}
+body.dark .devman_tm_partners .partners_inner{
+	border-color: #595a6b;
+}
+body.dark .devman_tm_partners .swiper .swiper-slide{
+	border-color: #595a6b;
+}
+body.dark .devman_tm_news .details .title a{
+	color: #fff;
+}
+body.dark .devman_tm_news .details .title a:hover{
+	color: var(--main-color);
+}
+body.dark .devman_tm_header.animate{
+	background-color: #252439;
+	box-shadow: 0px 0px 10px rgb(255 255 255 / 10%);
+}
+body.dark .devman_tm_header.animate .menu ul li a{
+	color: #fff;
+}
+body.dark .devman_tm_header.animate .menu ul li.current a{
+	color: var(--main-color);
+}
+body.dark .devman_tm_header .menu ul li a:hover{
+	color: var(--main-color);
+}
+body.dark .devman_tm_header.animate .logo .light{
+	display: block;
+}
+body.dark .devman_tm_header.animate .logo .dark{
+	display: none;
+}
+body.dark .progress_inner span.number{
+	color: #fff;
+}
+body.dark .devman_tm_modalbox .portfolio_main_title span a{
+	color: #aaaaba;
+}
+body.dark .devman_tm_modalbox .main_details .detailbox .first{
+	color: #fff;
+}
+body.dark .devman_tm_modalbox .main_details .detailbox span a{
+	color: #aaaaba;
+}
+body.dark .devman_tm_modalbox .news_popup_informations .details span a{
+	color: #aaaaba;
+}
+body.dark .devman_tm_contact .fields ul li input{
+	color: #a29fac;
+}
+body.dark .devman_tm_contact .fields .last textarea{
+	color: #a29fac;
+}
+body.dark .devman_tm_mobile_menu .mobile_menu_inner{
+	background-color: #252439;
+}
+body.dark .hamburger-inner, body.dark .hamburger-inner:after, body.dark .hamburger-inner:before{
+	background-color: #fff;
+}
+body.dark .hamburger.is-active .hamburger-inner, body.dark .hamburger.is-active .hamburger-inner:after, body.dark .hamburger.is-active .hamburger-inner:before{
+	background-color: #fff;
+}
+body.dark .devman_tm_mobile_menu .dropdown{
+	background-color: #252439;
+}
+body.dark .devman_tm_mobile_menu .dropdown .dropdown_inner ul li a{
+	color: #fff;
+}
+body.dark .progressbar a{
+	color: #fff;
+}
+body.dark .progressbar .line{
+	background-color: rgba(255,255,255,.4);
+}
+body.dark .progressbar{
+	background-color: rgba(25,255,255,.08);
+}
