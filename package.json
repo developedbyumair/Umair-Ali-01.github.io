@@ -1,31 +1,25 @@
 {
-  "name": "nextjs-with-typescript",
-  "version": "5.0.0",
+  "name": "boston-react",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
+    "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/cache": "latest",
-    "@emotion/react": "latest",
-    "@emotion/server": "latest",
-    "@emotion/styled": "latest",
-    "@mui/icons-material": "latest",
-    "@mui/material": "latest",
-    "@next/font": "latest",
-    "next": "latest",
-    "react": "latest",
-    "react-dom": "latest"
+    "@emotion/react": "^11.11.1",
+    "@next/font": "13.2.4",
+    "emailjs-com": "^3.2.0",
+    "next": "13.2.4",
+    "react": "18.2.0",
+    "react-bootstrap": "^1.6.1",
+    "react-dom": "18.2.0",
+    "swiper": "^9.2.0"
   },
   "devDependencies": {
-    "@types/node": "latest",
-    "@types/react": "latest",
-    "eslint": "latest",
-    "eslint-config-next": "latest",
-    "typescript": "latest"
+    "@types/node": "20.3.1",
+    "typescript": "5.1.3"
   }
 }
