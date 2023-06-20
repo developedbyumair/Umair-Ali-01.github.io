@@ -16,7 +16,7 @@ const Index = () => {
   }, []);
 
   return (
-    <Fragment>
+    <>
       <ImageView />
       {/* End */}
       {/* Header */}
@@ -51,7 +51,7 @@ const Index = () => {
       {/* Footer */}
       <Footer />
       {/* End Footer */}
-    </Fragment>
+    </>
   );
 };
 export default Index;
