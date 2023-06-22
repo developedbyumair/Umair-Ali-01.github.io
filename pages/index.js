@@ -10,10 +10,10 @@ import ImageView from "@/src/components/popup/ImageView";
 import { boston } from "@/src/utils";
 import { Fragment, useEffect } from "react";
 const Index = () => {
-  useEffect(() => {
-    boston.scrollToActiveNav();
-    boston.imgToSvg();
-  }, []);
+  // useEffect(() => {
+  //   boston.scrollToActiveNav();
+  //   boston.imgToSvg();
+  // }, []);
 
   return (
     <Fragment>

@@ -14,6 +14,7 @@ export default function Document() {
         <meta name="keywords" content="Boston - Portfolio Template" />
         <meta name="description" content="Boston - Portfolio Template" />
         {/* title */}
+        <title>Boston - Portfolio React NextJS Template</title>
         {/* Favicon */}
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
         {/* theme css */}
