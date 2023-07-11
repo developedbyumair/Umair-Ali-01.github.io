@@ -112,12 +112,15 @@
   border-color: #18171c;
 }
 .px-btn.px-btn-theme2 {
-  background: #f7af24;
-  border-color: #18171c;
+  background-color: #ffee58;
+  border-color: #6f632e;
   color: #18171c;
+  border-radius: 15px;
+  border: 1.5px solid #6f632e;
+  box-shadow: 5px 6px 2px #eae0c3;
 }
 .px-btn.px-btn-theme2:hover {
-  background: #a3a1b3;
+  background: black;
   border-color: #8b83ac;
   color: #fff;
 }
@@ -637,12 +640,14 @@ main {
   background: #fff;
   box-shadow: 0 0 0 0 #18171c;
   transition: ease all 0.35s;
+  border-radius: 20px;
 }
 .portfolio-box:hover {
-  box-shadow: 3px 3px 0 0 #18171c;
+  transform: translate(-0.25rem, -0.25rem);
+  box-shadow: 3px 3px #000;
 }
 .portfolio-box .portfolio-info {
-  border-top: 2px solid #18171c;
+  border-top: 1px solid #18171c;
   padding: 20px;
   position: relative;
 }
