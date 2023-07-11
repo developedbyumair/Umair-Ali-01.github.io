@@ -95,7 +95,7 @@ const Skill = () => {
                 />
               </span>
               <div className="avatar">
-                <img src="assets/img/avatar.png" alt="image" />
+                <img src="assets/img/Avatar2.png" alt="hireMe" />
               </div>
               <a className="px-btn px-btn-theme2" href="#contactus">
                 Hire me{" "}
