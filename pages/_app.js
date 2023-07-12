@@ -1,6 +1,7 @@
 import Preloader from "@/src/components/Preloader";
 import "../styles/globals.css";
 import { Fragment, useEffect, useState } from "react";
+import { ThemeProvider } from "react-bootstrap";
 
 export default function App({ Component, pageProps }) {
   const [loader, setLoader] = useState(true);
@@ -11,9 +12,12 @@ export default function App({ Component, pageProps }) {
   }, []);
 
   return (
-    <Fragment>
-      {loader && <Preloader />}
+    <ThemeProvider
+      breakpoints={["xxxl", "xxl", "xl", "lg", "md", "sm", "xs", "xxs"]}
+      minBreakpoint="xxs"
+    >
+      {/* {loader && <Preloader />} */}
       <Component {...pageProps} />
-    </Fragment>
+    </ThemeProvider>
   );
 }
