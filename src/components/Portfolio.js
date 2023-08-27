@@ -3,7 +3,7 @@ import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import React, { useState, useEffect } from "react";
 import SwipeableDrawer from "./SwipeableDrawer";
-import { Tooltip, OverlayTrigger, Image } from "react-bootstrap";
+import { Tooltip, OverlayTrigger, Image, Carousel } from "react-bootstrap";
 
 const portfolioData = [
   {
@@ -60,7 +60,6 @@ const portfolioData = [
 const Portfolio = () => {
   const [selectedTab, setSelectedTab] = useState("all");
   const [filteredProjects, setFilteredProjects] = useState([]);
-  const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
     const filtered = portfolioData.filter((p) => p.type === selectedTab);
@@ -91,20 +90,40 @@ const Portfolio = () => {
       >
         <div className="project-details">
           <div className="project-details__header">
-            <div className="project-details__header__title">Formatic</div>
-            <div className="project-details__header__subtitle">
+            <strong>Project Name</strong>
+          </div>
+          <Carousel>
+            <Carousel.Item>
+              <Image
+                src="https://lh3.googleusercontent.com/-JznXjXD6KdM/Y7dC4iLs1YI/AAAAAAAAAQw/xwrNWkaiXCUYPjmcSevloO9rfo69jUYoACO8EGAYYCw/s640-w640-h400/home%2Bpage.png"
+                alt="image"
+                style={{ width: "inherit", height: 300, borderRadius: "20px" }}
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <Image
+                src="https://i.ytimg.com/vi/UDKajZYuzYQ/maxresdefault.jpg"
+                alt="image"
+                style={{ width: "inherit", height: 300, borderRadius: "20px" }}
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <iframe
+                width="100%"
+                height="300"
+                src="https://www.youtube.com/embed/UDKajZYuzYQ"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              ></iframe>
+            </Carousel.Item>
+          </Carousel>
+          <div className="project-details__discription">
+            <p>
               Making money as a Digital Artist is a dream for many artists. Read
               this article to learn the 5 actionable ways digital artists can
-              make..
-            </div>
-          </div>
-          <div className="project-details__body">
-            <div className="project-details__body__title">Technologies</div>
-            <div className="project-details__body__tags">
-              <div className="project-details__body__tag">NEXT.JS</div>
-              <div className="project-details__body__tag">REACT.JS</div>
-              <div className="project-details__body__tag">WORDPRESS</div>
-            </div>
+              make...
+            </p>
           </div>
         </div>
       </SwipeableDrawer>
@@ -153,7 +172,6 @@ const Portfolio = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="portfolio-img"></div>
                   <div className="portfolio-info">
                     <h3
                       style={{
@@ -181,9 +199,6 @@ const Portfolio = () => {
                         <div className="card-tag">WORDPRESS</div>
                       </div>
                     </div>
-                    <a href={portfolio.image} className="gallery-link">
-                      <i className="fas fa-arrow-right" />
-                    </a>
                   </div>
                 </div>
               </div>
