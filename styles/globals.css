@@ -73,6 +73,7 @@ img.mfp-img {
   overflow: hidden;
   z-index: 1;
   background: rgba(0, 0, 0, 0.6);
+  border-radius: 15px 15px 0px 0px;
 }
 .portfolio-wrap::before {
   content: "";
@@ -255,3 +256,188 @@ img.mfp-img {
   text-decoration: none;
   opacity: 1.5;
 }
+.carousel-item {
+  width: 100%;
+  border-radius: 20px;
+}
+.carousel-indicators [data-bs-target] {
+  background-color: #000;
+}
+.carousel .carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  filter: invert(50%);
+}
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  filter: invert(100%);
+}
+.project-details__header {
+  margin-bottom: 10px;
+}
+.project-details .project-details__header > strong {
+  color: #000;
+  font-family: Mabry pro, sans-serif;
+}
+.project-details__discription {
+  margin: 20px 0px;
+}
+.project-details__discription > p {
+  color: #000;
+  font-family: Mabry pro, sans-serif;
+}
+
+.button {
+  --bg-color: #fff;
+  --main-color: #323232;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.button:active {
+  box-shadow: 0px 0px var(--main-color);
+  transform: translate(3px, 3px);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: var(--main-color);
+}
+
+.accordion {
+  display: contents;
+}
+
+/* burger menu */
+.burger {
+  position: relative;
+  width: 30px;
+  height: 20px;
+  background: transparent;
+  cursor: pointer;
+  display: block;
+}
+
+.burger input {
+  display: none;
+}
+
+.burger span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: black;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+.burger span:nth-of-type(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) {
+  top: 100%;
+  transform-origin: left center;
+  transform: translateY(-100%);
+}
+
+.burger input:checked ~ span:nth-of-type(1) {
+  transform: rotate(45deg);
+  top: 3px;
+  left: 5px;
+}
+
+.burger input:checked ~ span:nth-of-type(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.burger input:checked ~ span:nth-of-type(3) {
+  transform: rotate(-45deg);
+  top: 22px;
+  left: 5px;
+}
+
+.navbar-toggler {
+  transition: 0.25s ease-in-out;
+}
+
+/* Let's talk button csss */
+.cssbuttons-io-button {
+  background-color: #ffee58;
+  font-family: "Mabry Pro";
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 15px;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  box-shadow: 0px 6px 2px #eae0c3;
+}
+
+.cssbuttons-io-button .icon {
+  background: #000;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #ffee58;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
+
+/* Mobile screen */
