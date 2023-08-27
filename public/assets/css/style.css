@@ -20,6 +20,120 @@
 @import url(../vendor/magnific/magnific-popup.css);
 @import url(../vendor/font-awesome/css/all.min.css);
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+:root {
+  --tg-white: #ffffff;
+  --tg-border-color: #f3f3f3;
+  --tg-old-lace: #fff2e4;
+  --tg-granite-gray: #6b645d;
+  --tg-magnolia: #f0ebff;
+  --tg-bright-gray: #edeef1;
+  --tg-lavender: #e4f1ff;
+  --tg-heading-font-weight: 700;
+}
+/*=============================
+	07. Services
+===============================*/
+.services-item {
+  background: var(--tg-white);
+  box-shadow: 0px 15px 30px rgba(61, 90, 125, 0.08);
+  border-radius: 20px;
+  padding: 43px 38px 49px;
+  text-align: center;
+  margin-bottom: 30px;
+  border: 1px solid var(--tg-border-color);
+  transition: 0.3s linear;
+}
+.services-item:hover {
+  box-shadow: 0px 15px 30px rgba(61, 90, 125, 0.08);
+  transform: translateY(-10px);
+  background-color: #ffee58;
+}
+
+.services-item:hover .services-content p {
+  color: #000;
+  opacity: 1;
+}
+.services-area .row [class*="col-"]:nth-child(even) .services-item {
+  margin-top: 50px;
+}
+.services-icon {
+  width: 87px;
+  height: 87px;
+  margin: 0 auto 35px;
+  position: relative;
+  z-index: 1;
+  transition: 0.3s linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.services-icon::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--tg-old-lace);
+  border-radius: 50%;
+  z-index: -1;
+}
+.services-icon img {
+  max-width: 80px;
+  transform: translate(-10px, 15px);
+  transition: 0.4s linear;
+  border-radius: 10px;
+}
+.services-item:hover .services-icon img {
+  transform: translate(0) !important;
+}
+.services-content .title {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+.title > a {
+  color: #18171c;
+  transition: 0.3s linear;
+  font-weight: var(--tg-heading-font-weight);
+}
+.services-content p {
+  margin-bottom: 0;
+  color: var(--tg-granite-gray);
+  opacity: 0.7;
+  width: 100%;
+}
+.services-area
+  .row
+  [class*="col-"]:nth-child(2)
+  .services-item
+  .services-icon::before {
+  background: var(--tg-magnolia);
+}
+.services-area
+  .row
+  [class*="col-"]:nth-child(3)
+  .services-item
+  .services-icon::before {
+  background: var(--tg-bright-gray);
+}
+.services-area
+  .row
+  [class*="col-"]:nth-child(4)
+  .services-item
+  .services-icon::before {
+  background: var(--tg-lavender);
+}
+.services-area .row [class*="col-"]:nth-child(2) .services-icon img {
+  transform: translate(20px, 15px);
+}
+.services-area .row [class*="col-"]:nth-child(3) .services-icon img {
+  transform: translate(20px, -20px);
+}
+.services-area .row [class*="col-"]:nth-child(4) .services-icon img {
+  transform: translate(-30px, 18px);
+}
+
 .main-header {
   position: fixed;
   top: 0;
@@ -46,6 +160,7 @@
 }
 .main-header .navbar-nav > li > .nav-link.active span {
   background: #f7af24;
+  color: #000;
 }
 
 @media (max-width: 991px) {
@@ -159,7 +274,7 @@ a:hover {
 }
 
 .container {
-  max-width: 1230px;
+  max-width: 90%;
 }
 
 /* ----------------------
@@ -337,8 +452,7 @@ main {
 }
 .home-section .effect-1 {
   position: absolute;
-  top: 25%;
-  left: 2%;
+  left: 3%;
 }
 @media (max-width: 767px) {
   .home-section .effect-1 {
@@ -394,14 +508,14 @@ main {
   }
 }
 .home-section .home-intro h1 {
-  font-size: 70px;
+  font-size: 55px;
   color: #18171c;
   line-height: 1.1;
   margin: 0 0 25px;
 }
 @media (max-width: 767px) {
   .home-section .home-intro h1 {
-    font-size: 50px;
+    font-size: 40px;
     margin: 0 0 20px;
   }
 }
@@ -436,6 +550,26 @@ main {
   box-shadow: 0 0 0 0 #18171c;
   transition: ease all 0.35s;
 }
+.feature-icon {
+  border-radius: 50%;
+  background-color: #ededed;
+  width: 50px;
+  height: 50px;
+}
+.feature-icon Image {
+  max-width: 100%;
+  border-radius: 50%;
+  position: relative;
+  bottom: 1rem;
+  left: 1rem;
+}
+.feature-icon > img {
+  max-width: 100%;
+  border-radius: 50%;
+  position: relative;
+  bottom: 1rem;
+  left: 1rem;
+}
 @media (max-width: 767px) {
   .feature-box-01 {
     padding: 30px;
@@ -445,11 +579,12 @@ main {
   box-shadow: 5px 5px 0 0 #18171c;
 }
 .feature-box-01 .number {
-  font-size: 55px;
+  font-size: 45px;
   line-height: 1;
   color: #18171c;
   font-weight: 600;
   margin-bottom: 20px;
+  margin: auto;
 }
 @media (max-width: 767px) {
   .feature-box-01 .number {
