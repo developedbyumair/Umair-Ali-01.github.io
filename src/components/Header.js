@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { Accordion } from "react-bootstrap";
 
 const Header = () => {
+  const [open, setOpen] = useState(false);
   return (
     <header className="main-header">
       <nav className="navbar header-nav navbar-expand-lg one-page-nav">
@@ -35,61 +37,92 @@ const Header = () => {
               </svg>
             </button>
           </a>
-          {/* / */}
+          <div
+            className="navbar-toggler"
+            onClick={(e) => {
+              if (e.detail === 1) {
+                setOpen(!open);
+              }
+            }}
+          >
+            <label className="burger" for="burger">
+              <input type="checkbox" id="burger" />
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
+          </div>
           <Accordion defaultActiveKey="0">
-            {/* Mobile Toggle */}
-            <Accordion.Item as={"button"} className="navbar-toggler">
-              <span />
-              <span />
-              <span />
-            </Accordion.Item>
-            {/* / */}
-            {/* Top Menu */}
             <Accordion.Item
               eventKey="0"
               className="navbar-collapse justify-content-end"
+              {...(!open && {
+                style: {
+                  display: "none",
+                },
+              })}
             >
-              <ul className="navbar-nav mx-auto">
-                <li>
-                  <a className="nav-link active" href="#home">
-                    <span>Home</span>
-                  </a>
-                </li>
-                <li>
-                  <a className="nav-link" href="#services">
-                    <span>Services</span>
-                  </a>
-                </li>
-                <li>
-                  <a className="nav-link" href="#skill">
-                    <span>Skills</span>
-                  </a>
-                </li>
-                <li>
-                  <a className="nav-link" href="#work">
-                    <span>Portfolio</span>
-                  </a>
-                </li>
-                <li>
-                  <a className="nav-link" href="#contactus">
-                    <span>Contact</span>
-                  </a>
-                </li>
-              </ul>
+              <div
+                style={{
+                  display: "contents",
+                }}
+              >
+                <ul className="navbar-nav mx-auto">
+                  <li>
+                    <a className="nav-link active" href="#home">
+                      <span>Home</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a className="nav-link" href="#services">
+                      <span>Services</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a className="nav-link" href="#skill">
+                      <span>Skills</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a className="nav-link" href="#work">
+                      <span>Portfolio</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a className="nav-link" href="#contactus">
+                      <span>Contact</span>
+                    </a>
+                  </li>
+                </ul>
+                <div className="d-flex justify-content-center justify-content-lg-end m-3 m-sm-0">
+                  <button
+                    className="cssbuttons-io-button"
+                    onClick={(e) => {
+                      window.location.href = "#contactus";
+                    }}
+                  >
+                    Let's Talk
+                    <div className="icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                      >
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path
+                          fill="currentColor"
+                          d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                        ></path>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
             </Accordion.Item>
           </Accordion>
-          {/* / */}
-          {/* Top Menu */}
-          <div className="ms-auto d-none d-lg-block">
-            <a className="px-btn px-btn-theme2" href="#contactus">
-              Contact Now
-            </a>
-          </div>
-          {/* / */}
         </div>
-        {/* Container */}
-      </nav>{" "}
-      {/* Navbar */}
+      </nav>
     </header>
   );
 };
