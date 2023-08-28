@@ -162,8 +162,8 @@
   border-radius: 30px;
 }
 .main-header .navbar-nav > li > .nav-link.active span {
-  background: #f7af24;
-  color: #000;
+  background: #4a50a6;
+  color: #fff;
 }
 
 @media (max-width: 991px) {
@@ -621,8 +621,8 @@ main {
   align-items: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background: #f7af24;
-  color: #18171c;
+  background: #4a50a6;
+  color: #fff;
   font-size: 32px;
 }
 
@@ -845,8 +845,8 @@ main {
   left: 0;
   right: 0;
   margin: auto;
-  background: #f7af24;
-  color: #18171c;
+  background: #4a50a6;
+  color: #fff;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -ms-flex-align: center;
