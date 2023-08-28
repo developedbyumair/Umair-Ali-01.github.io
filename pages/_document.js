@@ -11,11 +11,18 @@ export default function Document() {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <meta name="keywords" content="Boston - Portfolio Template" />
-        <meta name="description" content="Boston - Portfolio Template" />
+        <meta name="keywords" content="Umair - Portfolio" />
+        <meta name="description" content="Umair - Portfolio" />
         {/* title */}
         {/* Favicon */}
-        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+        <link
+          rel="shortcut icon"
+          type="image/x-icon"
+          href="/assets/img/Avatar2.png"
+          style={{
+            borderRadius: "50%",
+          }}
+        />
         {/* theme css */}
         <link href="assets/css/style.css" rel="stylesheet" />
       </Head>
