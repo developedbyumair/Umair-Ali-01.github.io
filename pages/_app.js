@@ -2,6 +2,7 @@ import Preloader from "@/src/components/Preloader";
 import "../styles/globals.css";
 import { Fragment, useEffect, useState } from "react";
 import { ThemeProvider } from "react-bootstrap";
+import "font-awesome/css/font-awesome.min.css";
 
 export default function App({ Component, pageProps }) {
   const [loader, setLoader] = useState(true);
