@@ -3,35 +3,41 @@ import SectionTitle from "./SectionTitle";
 const skillsData = [
   { id: 1, name: "HTML", icon: "fab fa-html5" },
   { id: 2, name: "CSS", icon: "fab fa-css3" },
-  { id: 3, name: "React JS", icon: "fab fa-react" },
-  { id: 4, name: "Angular", icon: "fab fa-angular" },
-  { id: 5, name: "iOs App", icon: "fab fa-apple" },
-  { id: 6, name: "App Dev", icon: "fab fa-android" },
+  { id: 3, name: "JS", icon: "fab fa-js" },
+  { id: 4, name: "React JS", icon: "fab fa-react" },
+  { id: 5, name: "Next Js", icon: "fa fa-next" },
+  { id: 6, name: "Node JS", icon: "fab fa-node-js" },
 ];
 const experiencesData = [
   {
     id: 1,
-    date: "Jan 2021 - Present",
-    designation: "Creative Director",
-    company: "pxdraft Ltd, UK",
+    date: "April 2022-Present",
+    designation: "Front-end Software Engineer",
+    company: "Invotyx",
   },
   {
     id: 2,
-    date: "Jan 2021 - Present",
-    designation: "Creative Director",
-    company: "pxdraft Ltd, UK",
+    date: "April 2021-Present",
+    designation: "Freelance Web Developer",
+    company: "Upwork, Fiverr, Freelancer,Facebook",
   },
   {
     id: 3,
-    date: "Jan 2021 - Present",
-    designation: "Creative Director",
-    company: "pxdraft Ltd, UK",
+    date: "April 2023-Present",
+    designation: "MERN Stack Software Engineer",
+    company: "BuildupSol",
   },
   {
     id: 4,
-    date: "Jan 2021 - Present",
-    designation: "Creative Director",
-    company: "pxdraft Ltd, UK",
+    date: "July 2021- Jan 2022",
+    designation: "WordPress Developer Intern",
+    company: "AJ Developers",
+  },
+  {
+    id: 5,
+    date: "May 2019- Aug 2019",
+    designation: "Junior Front-end Developer Intern",
+    company: "BrainArt",
   },
 ];
 const Skill = () => {
@@ -42,9 +48,9 @@ const Skill = () => {
           <div className="col-lg-6">
             <SectionTitle
               heading={"Skills and  Experience"}
-              subHeading={"Experience"}
+              subHeading={"Full-Stack Web Development"}
               text={
-                "I design and develop services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores."
+                "Experienced full-stack web developer specializing in React.js, Next.js, and Node.js. Passionate about delivering high-quality, performant web applications."
               }
             />
 

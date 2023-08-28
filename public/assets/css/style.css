@@ -31,6 +31,9 @@
   --tg-lavender: #e4f1ff;
   --tg-heading-font-weight: 700;
 }
+.fa-next:before {
+  content: "\004E";
+}
 /*=============================
 	07. Services
 ===============================*/
@@ -221,6 +224,7 @@
   background: #5c64cf;
   border-color: #5c64cf;
   color: #fff;
+  border-radius: 15px;
 }
 .px-btn.px-btn-theme:hover {
   background: #18171c;
