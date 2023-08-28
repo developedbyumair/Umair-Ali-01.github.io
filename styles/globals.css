@@ -34,12 +34,12 @@ img.mfp-img {
   border-color: #ff0000;
 }
 .nav.nav-pills .nav-link.active {
-  background-color: #f7af24;
+  background-color: #4a50a6;
   border-radius: 30px;
   font-weight: 600;
   text-transform: uppercase;
   font-size: 14px;
-  color: #18171c;
+  color: #fff;
   padding: 9px 20px;
 }
 .nav.nav-pills .nav-link.active:hover {
@@ -174,7 +174,7 @@ img.mfp-img {
   text-align: center;
   text-decoration: none;
   color: #fff;
-  background-color: #ff5252;
+  background-color: #4a50a6;
   border: 2px solid #000;
   border-radius: 10px;
   box-shadow: 3px 3px 0px #000;
