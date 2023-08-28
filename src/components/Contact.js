@@ -3,17 +3,17 @@ import { useState } from "react";
 import SectionTitle from "./SectionTitle";
 
 const contactInfo = [
-  { id: 1, label: "Phone", value: "+01 123 654 8096", icon: "fas fa-envelope" },
+  { id: 1, label: "Phone", value: "+92 302 58 33983", icon: "fas fa-envelope" },
   {
     id: 2,
     label: "Mail",
-    value: "info@domainname.com",
+    value: "developedbyumair@gmail.com",
     icon: "fas fa-phone-alt",
   },
   {
     id: 3,
-    label: "Visit My Studio",
-    value: "Warnwe Park Streetperrine, FL 33157 New York City",
+    label: "Reach Us",
+    value: "Islamabad, Pakistan",
     icon: "fas fa-map-marker-alt",
   },
 ];
@@ -43,10 +43,10 @@ const Contact = () => {
     } else {
       emailjs
         .send(
-          "service_seruhwu", // service id
-          "template_21aw58z", // template id
+          "service_9u9gdab", // service id
+          "template_tegmrkv", // template id
           mailData,
-          "Q3pccdLZhU-mZT7tQ" // public api
+          "dz63_aKnjbu-FDH-g" // public api
         )
         .then(
           (response) => {
