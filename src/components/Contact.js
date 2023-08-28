@@ -130,13 +130,13 @@ const Contact = () => {
                   </div>
                   <div className="col-md-12">
                     <div className="form-group">
-                      <label className="form-label">Your message</label>
+                      <label className="form-label">Your Project Details</label>
                       <textarea
                         name="message"
                         onChange={(e) => onChange(e)}
                         value={message}
                         id="message"
-                        placeholder="Your message *"
+                        placeholder="Details *"
                         rows={3}
                         className={`form-control ${
                           error ? (message.length !== 0 ? "" : "invalid") : ""
