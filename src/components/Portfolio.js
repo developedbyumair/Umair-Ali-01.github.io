@@ -8,58 +8,147 @@ import { Tooltip, OverlayTrigger, Image, Carousel } from "react-bootstrap";
 const portfolioData = [
   {
     id: 1,
-    title: "Agency Landing page",
-    subtitle: "Web/WordPress",
-    image: "assets/img/project-1.jpg",
+    title: "V-tech",
+    subtitle:
+      "International Real Estate Platform which connects buyers and sellers globally.... ",
+    discription: "",
+    techStack: ["REACT.JS", "MUI-V5", "REDUX", "GOOGLE MAPS SDK"],
     type: "react.JS",
   },
   {
     id: 2,
-    title: "Agency Landing page",
-    subtitle: "Web/WordPress",
-    image: "assets/img/project-2.jpg",
+    title: "Ventiswap",
+    subtitle: "Cryptocurrency Exchange & Digital Wallet.... ",
+    discription: "",
+    techStack: [
+      "REACT.JS",
+      "MUI-V5",
+      "REDUX",
+      "BINANCE SDK",
+      "WALLET INTEGRATION",
+    ],
     type: "react.JS",
   },
   {
     id: 3,
-    title: "Agency Landing page",
-    subtitle: "Web/WordPress",
-    image: "assets/img/project-3.jpg",
-    type: "next.JS",
+    title: "Yoor",
+    subtitle: "NFT Marketplace for Global Artists & Creators.... ",
+    discription: "",
+    techStack: ["NEXT.JS", "BOOTSTRAP", "MORALIS SDK", "NFT INTEGRATION"],
+    type: "react.JS",
   },
   {
     id: 4,
-    title: "Agency Landing page",
-    subtitle: "Web/WordPress",
-    image: "assets/img/project-4.jpg",
-    type: "next.JS",
+    title: "Fomatic",
+    subtitle: "Dynamic Task Management & Workflow Tool for Teams.... ",
+    discription: "",
+    techStack: [
+      "NEXT.JS",
+      "GOOGLE WORKSPACE",
+      "GOOGLE ADD-ONS",
+      "BOARD INTEGRATION",
+    ],
+    type: "react.JS",
   },
   {
     id: 5,
-    title: "Agency Landing page",
-    subtitle: "Web/WordPress",
-    image: "assets/img/project-5.jpg",
-    type: "wordPress",
+    title: "Wilwinhk",
+    subtitle:
+      "Comprehensive E-Commerce Solution To Provide A Seamless Shopping Experience.... ",
+    discription: "",
+    techStack: ["REACT.JS", "STRIPE SDK", "EXPRESS.JS", "MONGODB"],
+    type: "MERN",
   },
   {
     id: 6,
-    title: "Agency Landing page",
-    subtitle: "Web/WordPress",
-    image: "assets/img/project-6.jpg",
-    type: "wordPress",
+    title: "Evanglium",
+    subtitle:
+      "Multi-Platform NFT Display & Wallet Integration Platform To Showcase NFTs & Digital Art.... ",
+    discription: "",
+    techStack: ["NEXT.JS", "MUI-V5", "MORALIS SDK", "ETHER.JS"],
+    type: "react.JS",
   },
   {
     id: 7,
-    title: "Testing",
-    subtitle: "sadsa",
-    image: "assets/img/project-6.jpg",
+    title: "SmartNet",
+    subtitle: "Communication & Contact Sharing Platform for Businesses.... ",
+    discription: "",
+    techStack: ["REACT.JS", "SEMANTIC UI", "TWILIO SDK"],
+    type: "MERN",
+  },
+  {
+    id: 9,
+    title: "Alnoor Mart",
+    subtitle: "Online Shopping Experience for Customers & Vendors.... ",
+    discription: "",
+    techStack: ["WORDPRESS", "ELEMENTOR", "WOOCOMMERCE"],
     type: "wordPress",
   },
+  {
+    id: 10,
+    title: "Alnoor Herbal",
+    subtitle: "Herbal Products  & Supplements to Boost Immunity.... ",
+    discription: "",
+    techStack: ["WORDPRESS", "ELEMENTOR"],
+    type: "wordPress",
+  },
+  {
+    id: 11,
+    title: "Alnoor International",
+    subtitle: "Real Estate Listings Platform for International Buyers.... ",
+    discription: "",
+    techStack: ["WORDPRESS", "WP-BAKERY", "API INTEGRATION"],
+    type: "wordPress",
+  },
+  {
+    id: 12,
+    title: "LMS (Teacher Evaluation System Module)",
+    subtitle:
+      "Educational Management & Evaluation System for Teachers, Students & Admin.... ",
+    discription: "",
+    techStack: ["REACT.JS", "MUI-V4", "REDUX"],
+    type: "react.JS",
+  },
+  {
+    id: 13,
+    title: "Small Survival",
+    subtitle:
+      "Online Course Directory for Students & Teachers to earn money.... ",
+    discription: "",
+    techStack: ["NEXT.JS", "SEMANTIC-UI", "REDUX"],
+    type: "react.JS",
+  },
+  {
+    id: 14,
+    title: "Tech Survival",
+    subtitle: "Global & Local Tech News Portal for Tech Enthusiasts.... ",
+    discription: "",
+    techStack: ["NEXT.JS", "SEMANTIC-UI", "RAPID API SDK"],
+    type: "react.JS",
+  },
+  {
+    id: 15,
+    title: "Quiz App",
+    subtitle: "Interactive Quiz Application for Students.... ",
+    techStack: ["HTML", "CSS", "JS"],
+    type: "withoutFramework",
+  },
 ];
+
+const renderTooltip = (props) => (
+  <Tooltip id="button-tooltip" {...props}>
+    Project Details
+  </Tooltip>
+);
 
 const Portfolio = () => {
   const [selectedTab, setSelectedTab] = useState("all");
   const [filteredProjects, setFilteredProjects] = useState([]);
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  const toggleDrawer = () => {
+    setIsOpen(!isOpen);
+  };
 
   useEffect(() => {
     const filtered = portfolioData.filter((p) => p.type === selectedTab);
@@ -69,15 +158,6 @@ const Portfolio = () => {
     }
     setFilteredProjects(portfolioData);
   }, [selectedTab]);
-  const [isOpen, setIsOpen] = React.useState(false);
-  const toggleDrawer = () => {
-    setIsOpen(!isOpen);
-  };
-  const renderTooltip = (props) => (
-    <Tooltip id="button-tooltip" {...props}>
-      Project Details
-    </Tooltip>
-  );
 
   return (
     <>
@@ -140,8 +220,9 @@ const Portfolio = () => {
             >
               <Tab eventKey="all" title="All" />
               <Tab eventKey="react.JS" title="ReactJS" />
-              <Tab eventKey="next.JS" title="Next.JS" />
+              <Tab eventKey="MERN" title="MERN" />
               <Tab eventKey="wordPress" title="WordPress" />
+              <Tab eventKey="withoutFramework" title="Without Framework" />
             </Tabs>
             {filteredProjects.map((portfolio) => (
               <div className="col-sm-6 col-lg-4" key={portfolio.id}>
@@ -183,20 +264,28 @@ const Portfolio = () => {
                         fontFamily: "Mabry pro, sans-serif",
                       }}
                     >
-                      Five ways digital artists make money online
+                      {portfolio.title}
                     </h3>
                     <div className="card-description">
-                      Making money as a Digital Artist is a dream for many
-                      artists. Read this article to learn the 5 actionable ways
-                      digital artists can make...
+                      {portfolio.subtitle}
+                      <span
+                        style={{
+                          color: "#000",
+                          fontWeight: "600",
+                          cursor: "pointer",
+                        }}
+                        onClick={toggleDrawer}
+                      >
+                        click here to see more
+                      </span>
                     </div>
-                    <strong>Technologies</strong>
+                    <strong>Tech Stack</strong>
                     <span />
                     <div role="listitem">
                       <div className="card-tags">
-                        <div className="card-tag">NEXT.JS</div>
-                        <div className="card-tag">REACT.JS</div>
-                        <div className="card-tag">WORDPRESS</div>
+                        {portfolio?.techStack?.map((tech) => (
+                          <div className="card-tag">{tech}</div>
+                        ))}
                       </div>
                     </div>
                   </div>
