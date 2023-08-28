@@ -169,23 +169,22 @@ img.mfp-img {
 .card-tag {
   display: inline-block;
   padding: 6px 12px;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
   text-align: center;
   text-decoration: none;
-  color: #fff;
-  background-color: #4a50a6;
-  border: 2px solid #000;
-  border-radius: 10px;
-  box-shadow: 3px 3px 0px #000;
   transition: all 0.3s ease;
   border-radius: 8rem;
-}
-.card-tag:hover {
   background-color: transparent;
   color: #ff5252;
   border: 2px solid #ff5252;
-  box-shadow: 5px 5px 0px #ff5252;
+  box-shadow: 3px 3px 0px #ff5252;
+  border-radius: 10px;
+}
+.card-tag:hover {
+  background-color: #fcf414;
+  box-shadow: none;
+  transform: translateY(4px);
   border-radius: 10px;
 }
 .card-tag:active {
@@ -212,8 +211,8 @@ img.mfp-img {
   right: 20px;
   z-index: 99;
   font-size: 20px;
-  background-color: white;
-  color: black;
+  background-color: #f7af24;
+  color: #fff;
   width: 45px;
   height: 45px;
   opacity: 0.75;
