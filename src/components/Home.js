@@ -32,7 +32,7 @@ const Home = () => {
               </p>
               <div className="btn-bar">
                 <a className="px-btn px-btn-theme" href="#contactus">
-                  Let’s Talk
+                  Let’s Discuss
                 </a>
               </div>
             </div>
