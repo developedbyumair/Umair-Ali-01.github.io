@@ -2,6 +2,7 @@ import SectionTitle from "./SectionTitle";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import React, { useState, useEffect } from "react";
+import { PortfolioSection, ProjectDetails } from "../views/components";
 import SwipeableDrawer from "./SwipeableDrawer";
 import { Tooltip, OverlayTrigger, Image, Carousel } from "react-bootstrap";
 
@@ -291,6 +292,11 @@ const Portfolio = () => {
                   </div>
                 </div>
               </div>
+              <PortfolioSection
+                key={portfolio.id}
+                portfolio={portfolio}
+                handleProjectDetails={handleProjectDetails}
+              />
             ))}
           </div>
         </div>
