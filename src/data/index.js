@@ -1,0 +1,1 @@
+export { portfolioData } from "./PortfolioItem";
