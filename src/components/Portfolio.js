@@ -11,9 +11,14 @@ const Portfolio = () => {
   const [selectedTab, setSelectedTab] = useState("all");
   const [filteredProjects, setFilteredProjects] = useState([]);
   const [isOpen, setIsOpen] = React.useState(false);
+  const [projectDetails, setProjectDetails] = useState({});
 
   const toggleDrawer = () => {
     setIsOpen(!isOpen);
+  };
+  const handleProjectDetails = (project) => {
+    setProjectDetails(project);
+    toggleDrawer();
   };
 
   useEffect(() => {
@@ -34,44 +39,7 @@ const Portfolio = () => {
         onSave={toggleDrawer}
         placement="end"
       >
-        <div className="project-details">
-          <div className="project-details__header">
-            <strong>Project Name</strong>
-          </div>
-          <Carousel>
-            <Carousel.Item>
-              <Image
-                src="https://lh3.googleusercontent.com/-JznXjXD6KdM/Y7dC4iLs1YI/AAAAAAAAAQw/xwrNWkaiXCUYPjmcSevloO9rfo69jUYoACO8EGAYYCw/s640-w640-h400/home%2Bpage.png"
-                alt="image"
-                style={{ width: "inherit", height: 300, borderRadius: "20px" }}
-              />
-            </Carousel.Item>
-            <Carousel.Item>
-              <Image
-                src="https://i.ytimg.com/vi/UDKajZYuzYQ/maxresdefault.jpg"
-                alt="image"
-                style={{ width: "inherit", height: 300, borderRadius: "20px" }}
-              />
-            </Carousel.Item>
-            <Carousel.Item>
-              <iframe
-                width="100%"
-                height="300"
-                src="https://www.youtube.com/embed/UDKajZYuzYQ"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              ></iframe>
-            </Carousel.Item>
-          </Carousel>
-          <div className="project-details__discription">
-            <p>
-              Making money as a Digital Artist is a dream for many artists. Read
-              this article to learn the 5 actionable ways digital artists can
-              make...
-            </p>
-          </div>
-        </div>
+        <ProjectDetails project={projectDetails} />
       </SwipeableDrawer>
       <section id="work" className="section work-section bg-gray">
         <div className="container">
