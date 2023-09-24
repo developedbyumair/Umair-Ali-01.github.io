@@ -1,11 +1,10 @@
-import SectionTitle from "./SectionTitle";
+import React, { useEffect, useState } from "react";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
-import React, { useState, useEffect } from "react";
 import { portfolioData } from "../data";
 import { PortfolioSection, ProjectDetails } from "../views/components";
+import SectionTitle from "./SectionTitle";
 import SwipeableDrawer from "./SwipeableDrawer";
-import { Tooltip, OverlayTrigger, Image, Carousel } from "react-bootstrap";
 
 const Portfolio = () => {
   const [selectedTab, setSelectedTab] = useState("all");
