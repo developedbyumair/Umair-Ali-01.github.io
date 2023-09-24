@@ -55,7 +55,7 @@ const Portfolio = () => {
               <Tab eventKey="react.JS" title="ReactJS" />
               <Tab eventKey="MERN" title="MERN" />
               <Tab eventKey="wordPress" title="WordPress" />
-              <Tab eventKey="withoutFramework" title="Without Framework" />
+              <Tab eventKey="withoutFramework" title="Static" />
             </Tabs>
             {filteredProjects.map((portfolio) => (
               <PortfolioSection
