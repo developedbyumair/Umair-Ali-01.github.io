@@ -11,6 +11,8 @@ export const portfolioData = [
       detailDiscription:
         "V-tech is a global platform that facilitates connections between buyers and sellers. It serves as a real estate marketplace where users can search for properties, list their own properties, and engage with fellow users. Additionally, V-tech offers campaigns and strategies for those looking to sell their properties.",
       sliderImages: ["vtech1", "vtech2", "vtech3"],
+      isCompanyProject: true,
+      projectLink: "https://dev.vtech-upgraded.com/",
     },
   },
   {

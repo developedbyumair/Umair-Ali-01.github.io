@@ -35,7 +35,6 @@ const Portfolio = () => {
         title={"Project Details"}
         open={isOpen}
         onClose={toggleDrawer}
-        onSave={toggleDrawer}
         placement="end"
       >
         <ProjectDetails project={projectDetails} />

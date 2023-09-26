@@ -1,7 +1,9 @@
 import { Image, Carousel, Button } from "react-bootstrap";
 import React from "react";
+import Link from "next/link";
 
 export const ProjectDetails = ({ project }) => {
+  const [preview, setPreview] = React.useState(false);
   const { sliderImages } = project;
   return (
     <div className="project-details">
@@ -34,48 +36,59 @@ export const ProjectDetails = ({ project }) => {
         <div className="project-description">{project.detailDiscription}</div>
       </div>
       <div className="project-details__links">
-        <Button className="projectButton">
+        <Button
+          className="projectButton"
+          onClick={() => {
+            if (project?.isCompanyProject) setPreview(true);
+          }}
+        >
           <img src="assets/img/github.svg" />
           <span>Continue with Github</span>
         </Button>
-        <p>
-          Sorry for the inconvenience, this project code is not available for
-          public.
-        </p>
-        <Button className="projectButton">
-          <img src="assets/img/live.svg" />
-          Click here to see live
-        </Button>
+        {preview && (
+          <cite
+            style={{
+              color: "red",
+            }}
+          >
+            Sorry for the inconvenience, this project code is not available for
+            public.
+          </cite>
+        )}
+        <Link
+          href={project?.projectLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button className="projectButton">
+            <img src="assets/img/live.svg" />
+            Click here to see live
+          </Button>
+        </Link>
         <div className="user-avatar-container">
           <span className="user-avatar-line" />
-          <img
-            src="https://cdn.dribbble.com/users/78433/avatars/small/305e1c98dca8c28213f093b08aed255b.png?1544179193"
-            alt="Banner"
-            className="user-avatar"
-          />
+          <img src="assets/img/me.jpg" alt="Banner" className="user-avatar" />
           <span className="user-avatar-line" />
         </div>
-        <strong
+        <div
           style={{
             margin: "10px auto",
             textAlign: "center",
-            display: "block",
           }}
         >
-          (Umair Ali)
-        </strong>
-        <p
-          style={{
-            margin: "10px auto",
-            textAlign: "center",
-            display: "block",
-          }}
-        >
-          Experienced full-stack web development
-        </p>
+          <strong>(Umair Ali)</strong>
+          <p>Experienced full-stack web development</p>
+        </div>
+
         <div className="project-details__fellowme">
-          {/*  */}
-          <p>Follow me on</p>
+          <p
+            className="project-description"
+            style={{
+              fontWeight: "600",
+            }}
+          >
+            Connect with me on
+          </p>
           <div className="share">
             <button className="btn2">
               <svg
@@ -89,19 +102,19 @@ export const ProjectDetails = ({ project }) => {
               </svg>
               <span className="tooltiptext2">
                 <div className="card">
-                  <svg
-                    fill="#000000"
-                    width="24px"
-                    viewBox="0 0 24 24"
-                    height="24px"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <img
+                    src="assets/img/me.jpg"
+                    alt="Banner"
                     className="account"
-                  >
-                    <path fill="none" d="M0 0h24v24H0V0z"></path>
-                    <path d="M12 5.9c1.16 0 2.1.94 2.1 2.1s-.94 2.1-2.1 2.1S9.9 9.16 9.9 8s.94-2.1 2.1-2.1m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z"></path>
-                  </svg>
+                  />
                 </div>
-                <div className="username">@meontwitter</div>
+                <Link
+                  href="https://twitter.com/DevByUmairr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="username">@DevByUmairr</div>
+                </Link>
               </span>
             </button>
             <button className="btn3">
@@ -117,23 +130,22 @@ export const ProjectDetails = ({ project }) => {
               </svg>
               <span className="tooltiptext3">
                 <div className="card">
-                  <svg
-                    fill="#000000"
-                    width="24px"
-                    viewBox="0 0 24 24"
-                    height="24px"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <img
+                    src="assets/img/me.jpg"
+                    alt="Banner"
                     className="account"
-                  >
-                    <path fill="none" d="M0 0h24v24H0V0z"></path>
-                    <path d="M12 5.9c1.16 0 2.1.94 2.1 2.1s-.94 2.1-2.1 2.1S9.9 9.16 9.9 8s.94-2.1 2.1-2.1m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z"></path>
-                  </svg>
+                  />
                 </div>
-                <div className="username">@meongit</div>
+                <Link
+                  href="https://github.com/developedbyumair"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="username">@developedbyumair</div>
+                </Link>
               </span>
             </button>
           </div>
-          {/*  */}
         </div>
       </div>
     </div>
