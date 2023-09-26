@@ -34,6 +34,29 @@
 .fa-next:before {
   content: "\004E";
 }
+/* For webkit-based browsers like Chrome and Safari */
+/* Customize the scrollbar */
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 8px;
+  height: 8px;
+}
+
+/* Customize the scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Customize the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #ddd;
+  border-radius: 16px;
+}
+
+/* Hide scrollbar buttons (up and down buttons) */
+::-webkit-scrollbar-button {
+  display: none;
+}
 /*=============================
 	07. Services
 ===============================*/
