@@ -1062,6 +1062,11 @@ main {
   margin-top: 2rem;
   border-radius: 12px;
 }
+@media (max-width: 991px) {
+  .offcanvas-end {
+    width: 100%;
+  }
+}
 .offcanvas-header {
   background-color: #000;
   color: #fff;
