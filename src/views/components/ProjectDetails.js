@@ -30,6 +30,7 @@ export const ProjectDetails = ({ project }) => {
       </Carousel.Item> */}
       </Carousel>
       <div className="project-details__discription">
+        <strong>Projct Scope</strong>
         <div className="project-description">{project.detailDiscription}</div>
       </div>
       <div className="project-details__links">
