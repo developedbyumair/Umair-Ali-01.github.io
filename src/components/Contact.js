@@ -176,7 +176,13 @@ const Contact = () => {
                   </div>
                   <div className="col">
                     <h5>{contact.label}</h5>
-                    <p>{contact.value}</p>
+                    <p
+                      style={{
+                        fontSize: "1.2rem",
+                      }}
+                    >
+                      {contact.value}
+                    </p>
                   </div>
                 </li>
               ))}
