@@ -1232,12 +1232,12 @@ main {
 .button {
   --bg-color: #fff;
   --main-color: #323232;
-  width: 40px;
-  height: 40px;
+  max-width: 40px;
+  min-height: 40px;
   border-radius: 100%;
   border: 2px solid var(--main-color);
   background-color: var(--bg-color);
-  box-shadow: 4px 4px var(--main-color);
+  box-shadow: 5px 2px var(--main-color);
   font-size: 25px;
   display: flex;
   justify-content: center;
