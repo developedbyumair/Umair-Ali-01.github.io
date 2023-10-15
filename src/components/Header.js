@@ -1,8 +1,11 @@
+import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react";
 import { Accordion } from "react-bootstrap";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
+  const router = useRouter();
   return (
     <header className="main-header">
       <nav className="navbar header-nav navbar-expand-lg one-page-nav">
@@ -10,8 +13,10 @@ const Header = () => {
           <a className="navbar-brand" href="#">
             <button className="button">
               <svg
-                width="50"
-                height="20"
+                style={{
+                  minWidth: "50px",
+                  maxHeight: "20px",
+                }}
                 viewBox="0 0 52.001 71.201"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -95,12 +100,7 @@ const Header = () => {
                   </li>
                 </ul>
                 <div className="d-flex justify-content-center justify-content-lg-end m-3 m-sm-0">
-                  <button
-                    className="cssbuttons-io-button"
-                    onClick={(e) => {
-                      window.location.href = "#contactus";
-                    }}
-                  >
+                  <a href="#contactus" className="cssbuttons-io-button">
                     Let's Talk
                     <div className="icon">
                       <svg
@@ -116,7 +116,7 @@ const Header = () => {
                         ></path>
                       </svg>
                     </div>
-                  </button>
+                  </a>
                 </div>
               </div>
             </Accordion.Item>
