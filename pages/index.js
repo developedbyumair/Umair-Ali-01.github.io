@@ -5,17 +5,15 @@ import Home from "@/src/components/Home";
 import Portfolio from "@/src/components/Portfolio";
 import Services from "@/src/components/Services";
 import Skill from "@/src/components/Skill";
-import Testimonial from "@/src/components/Testimonial";
-import ImageView from "@/src/components/popup/ImageView";
 
 const Index = () => {
   return (
     <>
       {/* <ImageView /> */}
       {/* Header */}
-      <Header />
       {/* Main */}
       <main className="wrapper">
+        <Header />
         {/* Home Section */}
         <Home />
         {/* Services Section */}
@@ -28,12 +26,8 @@ const Index = () => {
         {/* <Testimonial /> */}
         {/* Contact Section */}
         <Contact />
-        {/* Effect */}
-        <div className="right-effects" />
-        <div className="left-effects" />
+        <Footer />
       </main>
-      {/* Footer */}
-      <Footer />
     </>
   );
 };
