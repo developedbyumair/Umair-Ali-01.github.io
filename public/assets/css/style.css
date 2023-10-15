@@ -976,6 +976,7 @@ main {
 /* Let's talk button csss */
 .cssbuttons-io-button {
   background-color: #ffee58;
+  color: #000;
   font-family: "Mabry Pro";
   padding: 0.35em;
   padding-left: 1.2em;
