@@ -11,7 +11,7 @@ import ImageView from "@/src/components/popup/ImageView";
 const Index = () => {
   return (
     <>
-      <ImageView />
+      {/* <ImageView /> */}
       {/* Header */}
       <Header />
       {/* Main */}
