@@ -5,6 +5,15 @@ import Link from "next/link";
 export const ProjectDetails = ({ project }) => {
   const [preview, setPreview] = React.useState(false);
   const { sliderImages } = project;
+
+  React.useEffect(() => {
+    if (preview) {
+      setTimeout(() => {
+        setPreview(false);
+      }, 3000);
+    }
+  }, [preview]);
+
   return (
     <div className="project-details">
       <div className="project-details__header">
