@@ -13,7 +13,7 @@ export const PortfolioSection = ({ portfolio, handleProjectDetails }) => {
       <div className="portfolio-box">
         <div className="portfolio-wrap">
           <img
-            src="assets/img/vtech1.png"
+            src={`assets/img/${portfolio.backgroundImage}.png`}
             alt="image"
             loading="lazy"
             className="card-thumbnail"
