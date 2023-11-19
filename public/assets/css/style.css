@@ -1331,9 +1331,9 @@ main {
   transition: all 0.3s ease;
   border-radius: 8rem;
   background-color: transparent;
-  color: #ff5252;
-  border: 2px solid #ff5252;
-  box-shadow: 3px 3px 0px #ff5252;
+  color: #292929;
+  border: 2px solid #4a50a6;
+  box-shadow: 3px 3px 0px #4a50a6;
   border-radius: 10px;
 }
 .card-tag:hover {
