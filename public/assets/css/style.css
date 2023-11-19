@@ -1338,6 +1338,7 @@ main {
 }
 .card-tag:hover {
   background-color: #fcf414;
+  border: none;
   box-shadow: none;
   transform: translateY(4px);
   border-radius: 10px;
