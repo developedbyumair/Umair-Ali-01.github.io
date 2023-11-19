@@ -54,7 +54,12 @@ const Home = () => {
         style={{ display: showScrollButton ? "block" : "none" }}
         onClick={scrollToTop}
       >
-        ↑
+        <i
+          className="bi bi-arrow-up-circle-fill"
+          style={{
+            color: "#292929",
+          }}
+        ></i>
       </button>
     </>
   );
