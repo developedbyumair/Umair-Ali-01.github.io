@@ -119,7 +119,7 @@
   margin-bottom: 12px;
 }
 .title > a {
-  color: #18171c;
+  color: #292929;
   transition: 0.3s linear;
   font-weight: var(--tg-heading-font-weight);
 }
