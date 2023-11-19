@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const ProjectDetails = ({ project }) => {
   const [preview, setPreview] = React.useState(false);
-  const { sliderImages } = project;
+  const { sliderImages, sliderVideos } = project;
 
   React.useEffect(() => {
     if (preview) {
@@ -29,31 +29,38 @@ export const ProjectDetails = ({ project }) => {
             />
           </Carousel.Item>
         ))}
-        {/* <Carousel.Item>
-        <iframe
-          width="100%"
-          height="300"
-          src="https://www.youtube.com/embed/UDKajZYuzYQ"
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        ></iframe>
-      </Carousel.Item> */}
+        {sliderVideos &&
+          sliderVideos.map((video) => (
+            <Carousel.Item>
+              <iframe
+                width="100%"
+                height="300"
+                src={video}
+                title="YouTube video player"
+                frameBorder="0"
+                autoPlay
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              ></iframe>
+            </Carousel.Item>
+          ))}
       </Carousel>
       <div className="project-details__discription">
         <strong>Projct Scope</strong>
         <div className="project-description">{project.detailDiscription}</div>
       </div>
       <div className="project-details__links">
-        <Button
-          className="projectButton"
-          onClick={() => {
-            if (project?.isCompanyProject) setPreview(true);
-          }}
-        >
-          <img src="assets/img/github.svg" />
-          <span>Continue with Github</span>
-        </Button>
+        {!project?.isWithCode && (
+          <Button
+            className="projectButton"
+            onClick={() => {
+              if (project?.isCompanyProject) setPreview(true);
+            }}
+          >
+            <img src="assets/img/github.svg" />
+            <span>Continue with Github</span>
+          </Button>
+        )}
+
         {preview && (
           <cite
             style={{
