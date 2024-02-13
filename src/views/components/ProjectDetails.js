@@ -125,11 +125,11 @@ export const ProjectDetails = ({ project }) => {
                   />
                 </div>
                 <Link
-                  href="https://twitter.com/DevByUmairr"
+                  href="https://twitter.com/hyeumair"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <div className="username">@DevByUmairr</div>
+                  <div className="username">@hyeumairr</div>
                 </Link>
               </span>
             </button>
