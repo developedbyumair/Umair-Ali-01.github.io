@@ -15,8 +15,8 @@ export default function Document() {
         <meta property="og:description" content="Next JS Developer Portfolio" />
         <meta property="og:image" content="/assets/img/Banner.png" />
         <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="436" />
-        <meta property="og:image:height" content="228" />
+        <meta property="og:image:width" content="420" />
+        <meta property="og:image:height" content="200" />
         <link
           rel="shortcut icon"
           type="image/x-icon"
