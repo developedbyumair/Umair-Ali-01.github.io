@@ -39,6 +39,18 @@ img.mfp-img {
   fill: var(--main-color);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: sans-serif;
+}
+p {
+  font-family: Mabry pro, sans-serif;
+}
+
 /* project description */
 .project-description {
   font-size: 1.1rem;
