@@ -194,7 +194,7 @@ const Contact = () => {
           heading={"Let's Discuss Project"}
           subHeading={"Contact"}
           text={`Looking for someone to sprinkle creativity on your projects?
-           I am here your friendly neighborhood Product Designer`}
+           I am here your friendly neighborhood Product Developer.`}
         />
 
         <div className="row">
