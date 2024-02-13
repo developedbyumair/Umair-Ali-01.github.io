@@ -13,6 +13,7 @@
     "@next/font": "13.2.4",
     "emailjs-com": "^3.2.0",
     "font-awesome": "^4.7.0",
+    "gsap": "^3.12.5",
     "next": "^14.1.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.8.0",
