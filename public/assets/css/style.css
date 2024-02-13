@@ -1627,6 +1627,47 @@ main {
   color: #000;
   font-family: Mabry pro, sans-serif;
 }
+/* ** React Out Button */
+.button_project {
+  cursor: pointer;
+  display: inline-flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  font-weight: 500;
+  color: #ffffff;
+  height: 50px;
+  background-color: #000000;
+  border: 0;
+  text-decoration: none;
+  border-radius: 1em;
+  padding: 0.85em 1.5em;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+  transition: all 0.2s ease-in-out;
+}
+.button_project::before {
+  content: "";
+  background-image: url(https://theeugene.com/images/mail.png);
+  background-size: 30px 24px;
+  width: 30px;
+  height: 24px;
+  transition: all 0.2s ease-in-out;
+}
+.button_project[data-icon="button-arrow"]:is(:hover, :focus)::after {
+  transform: translateX(8px);
+  transition: all 0.2s ease-in-out;
+}
+.button_project[data-icon="button-mail"]:is(:hover, :focus)::before {
+  transform: translateX(-2px) rotate(-15deg);
+  transition: all 0.2s ease-in-out;
+}
+
+.button_project:is(:hover, :focus) {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease-in-out;
+}
 .project-details__discription {
   margin: 20px 0px 0px;
 }
