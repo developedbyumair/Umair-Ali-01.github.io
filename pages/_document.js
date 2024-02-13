@@ -12,9 +12,14 @@ export default function Document() {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         <meta name="keywords" content="Umair - Portfolio" />
-        <meta name="description" content="Umair - Portfolio" />
-        {/* title */}
-        {/* Favicon */}
+        <meta name="description" content="Next JS Developer Portfolio" />
+        <meta
+          property="og:image"
+          content="https://www.w3schools.com/images/w3schools_logo_436_2.png"
+        />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="436" />
+        <meta property="og:image:height" content="228" />
         <link
           rel="shortcut icon"
           type="image/x-icon"
