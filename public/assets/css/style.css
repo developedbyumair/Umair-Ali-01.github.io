@@ -161,12 +161,13 @@
 }
 
 .main-header {
+  padding: 0 2rem;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 11;
-  border-bottom: 2px solid #18171c;
+  /* border-bottom: 2px solid #18171c; */
   background: #fff;
 }
 .main-header .navbar {
@@ -202,13 +203,17 @@
   }
   .main-header .navbar-toggler span {
     width: 25px;
-    height: 2px;
+    height: 4px;
     background: #18171c;
     margin: 4px 0;
   }
   .main-header .navbar-collapse {
-    border-bottom: 2px solid #18171c;
-    border-top: 2px solid #18171c;
+    min-height: calc(42vh - 60px);
+    border-radius: 20px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    transition: "all 0.3s ease 0s";
+    margin-top: 10px;
     position: absolute;
     top: 100%;
     left: 0px;
@@ -217,11 +222,6 @@
   }
 }
 
-.footer {
-  border-top: 2px solid #18171c;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
 .footer .nav a {
   font-size: 16px;
   color: #555;
@@ -973,59 +973,6 @@ main {
 }
 /*# sourceMappingURL=style.css.map */
 
-/* Let's talk button csss */
-.cssbuttons-io-button {
-  background-color: #ffee58;
-  color: #000;
-  font-family: "Mabry Pro";
-  padding: 0.35em;
-  padding-left: 1.2em;
-  font-size: 16px;
-  font-weight: 600;
-  border-radius: 15px;
-  border: none;
-  letter-spacing: 0.05em;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  position: relative;
-  height: 2.8em;
-  padding-right: 3.3em;
-  box-shadow: 0px 6px 2px #eae0c3;
-}
-
-.cssbuttons-io-button .icon {
-  background: #000;
-  margin-left: 1em;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 2.2em;
-  width: 2.2em;
-  border-radius: 0.7em;
-  right: 0.3em;
-  transition: all 0.3s;
-}
-
-.cssbuttons-io-button:hover .icon {
-  width: calc(100% - 0.6em);
-}
-
-.cssbuttons-io-button .icon svg {
-  width: 1.1em;
-  transition: transform 0.3s;
-  color: #ffee58;
-}
-
-.cssbuttons-io-button:hover .icon svg {
-  transform: translateX(0.1em);
-}
-
-.cssbuttons-io-button:active .icon {
-  transform: scale(0.95);
-}
-
 /* Portfilio Section  */
 
 .card-thumbnail {
@@ -1261,6 +1208,8 @@ main {
 }
 
 .burger input {
+  width: 100%;
+  height: 100%;
   display: none;
 }
 
@@ -1627,6 +1576,13 @@ main {
   color: #000;
   font-family: Mabry pro, sans-serif;
 }
+.project-details__discription {
+  margin: 20px 0px 0px;
+}
+.project-details__discription > p {
+  color: #000;
+  font-family: Mabry pro, sans-serif;
+}
 /* ** React Out Button */
 .button_project {
   cursor: pointer;
@@ -1668,17 +1624,12 @@ main {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   transition: all 0.2s ease-in-out;
 }
-.project-details__discription {
-  margin: 20px 0px 0px;
 
 /*************footer Start*****************/
 
 .new_footer_area {
   background: #fbfbfd;
 }
-.project-details__discription > p {
-  color: #000;
-  font-family: Mabry pro, sans-serif;
 
 .new_footer_top {
   padding: 120px 0px 270px;
