@@ -22,7 +22,7 @@ const Home = () => {
                   />
                 </div>
                 <h6>
-                  <span>Hello.</span>
+                  <span>🚀 Hey.</span>
                 </h6>
                 <h1>
                   Transforming <br />
@@ -30,7 +30,11 @@ const Home = () => {
                   <br />
                   User-Friendly Realities
                 </h1>
-                <p>
+                <p
+                  style={{
+                    fontSize: "21px",
+                  }}
+                >
                   I am committed to delivering web solutions that elevate users
                   online presence and connect with audience effectively.
                 </p>
@@ -43,7 +47,7 @@ const Home = () => {
             </div>
             <div className="col-lg-6">
               <div className="d-flex justify-content-lg-end">
-                <img src="assets/img/Banner.jpg" alt="Banner" />
+                <img src="assets/img/Banner.png" alt="Banner" />
               </div>
             </div>
           </div>
