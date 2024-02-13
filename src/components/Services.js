@@ -37,7 +37,7 @@ const Services = () => {
     <>
       <section id="services" className="section services-section">
         <div className="container">
-          <SectionTitle heading={"Services I Offer"} subHeading={"Services"} />
+          <SectionTitle heading={"Services I Enjoy"} subHeading={"Services"} />
           <div className="services-area pt-35 pb-95">
             <div>
               <div className="row justify-content-center">
@@ -55,7 +55,7 @@ const Services = () => {
                       </div>
                       <div className="services-content">
                         <h4 className="title">
-                          <a href="services-details.html">{service.name}</a>
+                          <a href="#">{service.name}</a>
                         </h4>
                         <p>{service.desc}</p>
                       </div>
