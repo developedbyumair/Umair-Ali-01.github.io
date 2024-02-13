@@ -13,7 +13,6 @@ const Header = () => {
           borderRadius: "20px",
           boxShadow:
             "rgb(255 255 255 / 10%) 0px 20px 25px -5px, rgba(0, 0, 0, 0.1) 0px 8px 10px -6px",
-          transition: "all 0.3s ease 0s",
         }}
       >
         <nav className="navbar header-nav navbar-expand-lg one-page-nav">
@@ -108,16 +107,18 @@ const Header = () => {
                       </a>
                     </li>
                   </ul>
-                  <button
-                    type="button"
-                    className="button_project"
-                    data-icon="button-mail"
-                    onClick={() => {
-                      router.push("#contactus");
-                    }}
-                  >
-                    Reach Out
-                  </button>
+                  <div className="button_project_mobile">
+                    <button
+                      type="button"
+                      className="button_project"
+                      data-icon="button-mail"
+                      onClick={() => {
+                        router.push("#contactus");
+                      }}
+                    >
+                      Reach Out
+                    </button>
+                  </div>
                 </div>
               </Accordion.Item>
             </Accordion>

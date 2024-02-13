@@ -59,3 +59,13 @@ p {
   margin-bottom: 0.6rem;
   margin-top: 0.6rem;
 }
+@media (max-width: 991px) {
+  .button_project_mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.navbar-collapse {
+  transition: all 0.3s ease-out !important;
+}
