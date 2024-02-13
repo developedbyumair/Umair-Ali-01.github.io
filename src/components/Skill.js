@@ -19,7 +19,7 @@ const experiencesData = [
     id: 2,
     date: "April 2021-Present",
     designation: "Freelance Web Developer",
-    company: "Upwork, Fiverr, Freelancer,Facebook",
+    company: "Upwork, Fiverr, Freelancer,linkedin",
   },
   {
     id: 3,
@@ -30,13 +30,13 @@ const experiencesData = [
   {
     id: 4,
     date: "July 2021- Jan 2022",
-    designation: "WordPress Developer Intern",
+    designation: "WordPress Developer",
     company: "AJ Developers",
   },
   {
     id: 5,
     date: "May 2019- Aug 2019",
-    designation: "Junior Front-end Developer Intern",
+    designation: "Junior Front-end Developer",
     company: "BrainArt",
   },
 ];
@@ -63,7 +63,13 @@ const Skill = () => {
                       <div className="icon">
                         <i className={skill.icon} />
                       </div>
-                      <h6>{skill.name}</h6>
+                      <h6
+                        style={{
+                          fontFamily: "inherit",
+                        }}
+                      >
+                        {skill.name}
+                      </h6>
                     </div>
                   </div>
                 ))}
@@ -72,13 +78,25 @@ const Skill = () => {
           </div>
           <div className="col-lg-6 col-xl-5 ms-auto pt-5 pt-lg-0">
             <div className="experience-box">
-              <h3>Experience</h3>
+              <h3>Tech Experience</h3>
               <ul>
                 {experiencesData.map((experience) => (
                   <li key={experience.id}>
-                    <h6>{experience.date}</h6>
+                    <h6
+                      style={{
+                        fontFamily: "inherit",
+                      }}
+                    >
+                      {experience.date}
+                    </h6>
                     <div className="eb-right">
-                      <h5>{experience.designation}</h5>
+                      <h5
+                        style={{
+                          fontFamily: "inherit",
+                        }}
+                      >
+                        {experience.designation}
+                      </h5>
                       <span>{experience.company}</span>
                     </div>
                   </li>
@@ -100,9 +118,22 @@ const Skill = () => {
                   alt="image"
                 />
               </span>
-              <div className="avatar">
-                <img src="assets/img/Avatar2.png" alt="hireMe" />
+              <div
+                style={{
+                  position: "absolute",
+                  borderRadius: "50%",
+                  overflow: "hidden",
+                  width: "150px",
+                  top: "36%",
+                  mixBlendMode: "darken",
+                }}
+              >
+                <img src="assets/img/test.jpg" alt="hireMe" />
               </div>
+              <img
+                src="https://static.wixstatic.com/media/06b579_55d26e60c05e49809330ed6df177be40~mv2.png/v1/fill/w_497,h_554,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/about.png"
+                alt="hireMe"
+              />
               <a className="px-btn px-btn-theme2" href="#contactus">
                 Hire me{" "}
               </a>
