@@ -21,7 +21,7 @@ const Index = () => {
         {/* Skill Section */}
         <Skill />
         {/* Work Section */}
-        <Portfolio />
+        {/* <Portfolio /> */}
         {/* testimonial Section */}
         {/* <Testimonial /> */}
         {/* Contact Section */}
